@@ -1,1 +1,1 @@
-**gitCMS - A Github based Content Management System for storing rich text data.**
+# gitCMS - A Github based Content Management System for storing rich text data.
