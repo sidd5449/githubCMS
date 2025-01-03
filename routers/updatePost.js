@@ -1,7 +1,7 @@
 import express from 'express';
-import { updateController } from '../controllers/updateController.js';
+import { updatePostController } from '../controllers/updateController.js';
 
 const router = express.Router();
-router.post('/:id', updateController);
+router.post('/:id', updatePostController);
 
 export default router;
