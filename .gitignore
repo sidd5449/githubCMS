@@ -2,3 +2,4 @@ node_modules
 schema
 build
 dist
+.env
