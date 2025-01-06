@@ -1,7 +1,7 @@
 import express from 'express';
-import { deleteController } from '../controllers/deleteController.js';
+import { deletePostController } from '../controllers/deleteController.js';
 
 const router = express.Router();
-router.post('/:id', deleteController);
+router.post('/:id', deletePostController);
 
 export default router;

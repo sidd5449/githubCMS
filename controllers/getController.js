@@ -43,6 +43,8 @@ export const getSinglePostController = async(req, res) => {
         res.status(404).json({message: "Post not found"})
     }
 }
+
+// get user info
 export const getUserController = async(req, res) => {
     try {
         const id = req.params;

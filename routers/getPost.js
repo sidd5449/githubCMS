@@ -1,7 +1,7 @@
 import express from 'express';
-import { getController } from '../controllers/getController.js';
+import { getSinglePostController } from '../controllers/getController.js';
 
 const router = express.Router();
-router.post('/:id', getController);
+router.post('/:id', getSinglePostController);
 
 export default router;
