@@ -17,6 +17,10 @@ const postSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
+  repoName:{
+    type: String,
+    required: false,
+  }
 });
 
 const postData = mongoose.model("postData", postSchema);
