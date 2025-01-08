@@ -3,4 +3,5 @@ schema
 build
 dist
 .env
+uploads
 pkey.txt
