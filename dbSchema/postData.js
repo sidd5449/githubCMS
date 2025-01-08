@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const postSchema = new mongoose.Schema({
   id: {
-    type: Number,
+    type: String,
     required: true,
   },
   postTitle: {
@@ -19,6 +19,10 @@ const postSchema = new mongoose.Schema({
   },
   repoName:{
     type: String,
+    required: false,
+  },
+  file:{
+    type: Buffer,
     required: false,
   }
 });

@@ -11,13 +11,19 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@octokit/rest": "^21.0.2",
     "axios": "^1.7.9",
+    "base-64": "^1.0.0",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "fs-extra": "^11.2.0",
+    "globby": "^14.0.2",
     "mongoose": "^8.9.3",
+    "multer": "^1.4.5-lts.1",
     "nodemon": "^3.1.9",
-    "octokit": "^4.0.3"
+    "octokit": "^4.0.3",
+    "uuid": "^11.0.4"
   }
 }
