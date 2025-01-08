@@ -32,11 +32,11 @@ app.use(cors());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.use('/getpost', getPostRouter)
 app.use('/createpost', upload.single('file'), createPostRouter)
 app.use('/updatepost', updatePostRouter)
 app.use('/deletepost', deletePostRouter)
 app.use('/createuser', createUserRouter)
+app.use('/getpost', getPostRouter);
 // app.use('/getToken', getTokenRouter)
 
 mongoose

@@ -34,9 +34,11 @@ export const getAllPostsController = async(req, res) => {
 export const getSinglePostController = async(req, res) => {
     try {
         const id = req.params;
-        const fileInfo = await postData.find({id: id});
-        const authorInfo = await userData.find({githubUserName: fileInfo.author});
-        const postFile = getFile(fileInfo.author, authorInfo.repoName, authorInfo.token, fileInfo.postTitle);
+        console.log(id);
+        const fileInfo = await postData.find({id: id.id});
+        const authorInfo = await userData.find({githubUserName: fileInfo[0].author});
+        const postFile = await getFile(fileInfo[0].author, authorInfo[0].repoName, authorInfo[0].token, fileInfo[0].postTitle);
+        console.log(postFile)
         res.status(200).json(postFile);
 
     } catch (err) {
