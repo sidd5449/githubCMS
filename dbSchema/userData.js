@@ -13,10 +13,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
-  pwd: {
-    type: String,
-    required: false,
-  },
   repoName: {
     type: String,
     required: false,
