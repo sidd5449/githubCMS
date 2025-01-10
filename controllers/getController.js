@@ -7,24 +7,27 @@ export const getAllPostsController = async(req, res) => {
     let { page, pageSize, author } = req.body;
 
     try {
-        page = parseInt(page, 10) || 1;
-    pageSize = parseInt(pageSize, 10) || 50;
-    const posts = await postData.aggregate([
-        {
-          $facet: {
-            metadata: [{ $count: 'totalCount' }],
-            data: [{ $skip: (page - 1) * pageSize }, { $limit: pageSize }],
-          },
-        },
-      ]);
+    //     page = parseInt(page, 10) || 1;
+    // pageSize = parseInt(pageSize, 10) || 50;
+    // const posts = await postData.aggregate([
+    //     {
+    //       $facet: {
+    //         metadata: [{ $count: 'totalCount' }],
+    //         data: [{ $skip: (page - 1) * pageSize }, { $limit: pageSize }],
+    //       },
+    //     },
+    //   ]);
   
-      return res.status(200).json({
-        success: true,
-        articles: {
-          metadata: { totalCount: posts[0].metadata[0].totalCount, page, pageSize },
-          data: posts[0].data,
-        },
-      })
+    //   return res.status(200).json({
+    //     success: true,
+    //     articles: {
+    //       metadata: { totalCount: posts[0].metadata[0].totalCount, page, pageSize },
+    //       data: posts[0].data,
+    //     },
+    //   })
+      const {author} = req.body;
+      const results = await postData.find({author: author})
+      res.status(200).json(results);
     } catch (err) {
         res.status(404).json({message: err.message})
     }

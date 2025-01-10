@@ -11,6 +11,8 @@ import createPostRouter from './routers/createPost.js'
 import deletePostRouter from './routers/deletePost.js'
 import updatePostRouter from './routers/updatePost.js'
 import createUserRouter from './routers/createUser.js'
+import getAllPostsRouter from './routers/getAllPosts.js'
+import userAuthRouter from './routers/userAuth.js'
 
 dotenv.config();
 
@@ -37,6 +39,8 @@ app.use('/updatepost', updatePostRouter)
 app.use('/deletepost', deletePostRouter)
 app.use('/createuser', createUserRouter)
 app.use('/getpost', getPostRouter);
+app.use('/getAllPosts', getAllPostsRouter);
+app.use('/auth', userAuthRouter)
 // app.use('/getToken', getTokenRouter)
 
 mongoose
