@@ -48,5 +48,5 @@ nodemon index.js
 | /deletepost | Deletes the post from Github Repo. Pass fileId in request params |
 | /getPost | Get a specific post. Pass post id in request params. |
 | /getAllPosts | Get all the posts by a specific user. Pass author name in request body. |
-| /createuser | Creates a new user in database. Pass token, username, pwd, repoName, githubUserName, password. |
+| /createuser | Creates a new user in database. Pass token, username, repoName, githubUserName, password. |
 
